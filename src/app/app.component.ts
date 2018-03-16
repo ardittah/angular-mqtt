@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
     console.log("try connection: " + this.config.hostname + ":" + this.config.port + " - clientId=" + this.config.clientId);
     try {
       //creation Paho MQTT Client
-      this._client = new Paho.MQTT.Client(this.config.hostname, Number(this.config.port), "/mqtt", this.config.clientId);
+      this._client = new Paho.MQTT.Client(this.config.hostname, Number(this.config.port), this.config.path, this.config.clientId);
     } catch (e) {
       console.log(e);
       this.status = "Error on creation of client MQTT: " + e.message;

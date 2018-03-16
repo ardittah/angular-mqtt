@@ -1,5 +1,6 @@
 {
     "hostname" : "broker.mqttdashboard.com",
+	"path": "/mqtt",
     "port" : 8000,
     "clientId" : "clientId",
     "username" : "username",
