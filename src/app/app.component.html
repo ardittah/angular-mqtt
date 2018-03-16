@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <h2>{{status}}</h2>
+
+  <div class="border">
+		<input type="text" placeholder="Insert hostname (default {{config.hostname}})" on-input="config.hostname = $event.target.value"> 
+		<input type="number" placeholder="Insert port (default {{config.port}})" on-input="config.port = $event.target.value"> <br>
+		<input type="text" placeholder="Insert Username (default {{config.username}})" on-input="config.username = $event.target.value"> 
+		<input type="text" placeholder="Insert Password (default {{config.password}})" on-input="config.password = $event.target.value"> <br>
+		<input type="text" placeholder="Insert clientId (default {{config.clientId}}_[random number])" on-input="config.clientId = $event.target.value"> 
+		<input type="number" placeholder="keep alive (default {{config.keepAlive}})" on-input="config.keepAlive = $event.target.value"> <br>
+		<label>Clean Session</label> <input type="checkbox" checked on-change="config.cleanSession=($event.target.checked);">
+    <button on-click="connect()">Connect</button>
+    <button on-click="disconnect()">Disconnect</button><br>
+	</div>
+	<div class="border">
+		<input type="text" placeholder="Insert topic name (default {{config.topicStringSub}})" on-input="config.topicStringSub = $event.target.value"> 
+		<input type="number" placeholder="QoS (default {{config.QoSSub}})" on-input="config.QoSSub = $event.target.value" min="0" max="2"><br>
+		<button on-click="subscribe();" >Subscribe</button>
+    <button on-click="unsubscribe()">Unsubscribe</button><br>
+	</div>
+	<div class="border">
+		<input type="text" placeholder="Insert topic name (default {{config.topicStringPub}})" on-input="config.topicStringPub = $event.target.value"> 
+		<input type="text" placeholder="Insert Message" on-input="config.topicStringPubMessage = $event.target.value"><br>
+		<input type="number" placeholder="QoS (default {{config.QoSPub}})" on-input="config.QoSPub = $event.target.value" min="0" max="2">
+		<label>Retained</label> <input type="checkbox" on-change="config.retained=($event.target.checked);"/>
+    <button on-click="publish()">Publish</button><br>
+	</div>
+	<div class="border">
+    <label>Messages received:</label> 
+      <div *ngFor="let message of messages">
+          <label style="font-weight: normal">{{message}}</label><br>
+      </div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+{
+    "hostname" : "broker.mqttdashboard.com",
+    "port" : 8000,
+    "clientId" : "clientId",
+    "username" : "username",
+    "password" : "password",
+    "keepAlive" : 60,
+    "cleanSession" : true,
+    "useSSL": false,
+
+    "topicStringSub" : "topic",
+    "QoSSub" : 0,
+    
+    "topicStringPub" : "topic",
+    "topicStringPubMessage" : "",
+    "QoSPub" : 0,
+    "retained" : false
+}

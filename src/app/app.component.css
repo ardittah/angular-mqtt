@@ -1,0 +1,65 @@
+button {
+    margin: 5px 0px;
+}
+input {
+    margin: 5px 0px;
+}
+input::placeholder {
+    color: rgba(0,142,198,1);
+    font: normal 13px Verdana, Geneva, sans-serif;
+}
+input[type="number"], input[type="text"] {
+    width: 350px;
+
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 5px 10px;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: rgba(0,142,198,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+}
+button {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid rgba(0,142,198,1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(0,142,198,1);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+}
+label {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 5px;
+  border: none;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+h1,h2{
+    padding: 0px 20px;
+    color: rgba(0,142,198,1);
+    font-family: Verdana;
+}
+.border {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+button, input, div {
+    font: 600 13px Verdana, Geneva, sans-serif;
+}
